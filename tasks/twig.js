@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       each_template: ['templates["{{ filepath }}"] = Twig.twig({',
                       '    data: {{ compiled }},',
                       '    id: "{{ filepath }}",',
-                      '    allowInlineIncludes: true',
+                      '    allowInlineIncludes: true,',
                       '    async: false',
                       '});\n'].join('\n')
     });

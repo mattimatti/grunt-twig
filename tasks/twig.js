@@ -9,7 +9,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-  grunt.registerMultiTask('twig', 'Compile and concatenate Twig templates.', function() {x
+  grunt.registerMultiTask('twig', 'Compile and concatenate Twig templates.', function() {
     var Twig = require('twig');
 
     // Merge task-specific and/or target-specific options with these defaults.

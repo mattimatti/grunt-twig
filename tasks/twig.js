@@ -24,10 +24,11 @@ module.exports = function(grunt) {
                       '    data: {{ compiled }},',
                       '    id: "{{ filepath }}",',
                       '    allowInlineIncludes: true,',
+                      '    path: "./",',
                       '    async: false',
                       '});\n'].join('\n')
     });
-
+    
     // Compile *our* templates.
     options.template = Twig.twig({ data: options.template });
     options.each_template = Twig.twig({ data: options.each_template });

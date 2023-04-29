@@ -21,13 +21,13 @@ module.exports = function(grunt) {
       variable: 'window.JST',
       separator: '\n',
       template: null,
-      each_template: ['{{ variable }}["{{ filepath }}"] = Twig.twig({',
+      each_template: '{{ variable }}["{{ filepath }}"] = Twig.twig({',
                       '    data: {{ compiled }},',
                       '    id: "{{ filepath }}",',
                       '    allowInlineIncludes: true,',
                       '    path: "./",',
                       '    async: false',
-                      '});\n'].join('\n'),
+                      '});',
       template_key: function(path) { return path; }
     });
 

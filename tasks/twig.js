@@ -24,6 +24,7 @@ module.exports = function(grunt) {
                       '    data: {{ compiled }},',
                       '    id: "{{ filepath }}",',
                       '    allowInlineIncludes: true',
+                      '    async: false',
                       '});\n'].join('\n')
     });
 

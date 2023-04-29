@@ -21,13 +21,7 @@ module.exports = function(grunt) {
       variable: 'window.JST',
       separator: '\n',
       template: null,
-      each_template: '{{ variable }}["{{ filepath }}"] = Twig.twig({',
-                      '    data: {{ compiled }},',
-                      '    id: "{{ filepath }}",',
-                      '    allowInlineIncludes: true,',
-                      '    path: "./",',
-                      '    async: false',
-                      '});',
+      each_template: '{{ variable }}["{{ filepath }}"] = Twig.twig({ data: {{ compiled }}, id: "{{ filepath }}", allowInlineIncludes: true, path: "./", async: false });',
       template_key: function(path) { return path; }
     });
 

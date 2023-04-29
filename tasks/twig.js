@@ -59,8 +59,9 @@ module.exports = function(grunt) {
           });
         } catch (e) {
           grunt.log.warn(e);
+          grunt.log.warn(filepath);
         }
-      }).join(options.separator);
+      }).join(grunt.util.normalizelf(options.separator));
 
       // Apply overall template.
       src = options.template.render({ variable: options.variable, templates: src });
